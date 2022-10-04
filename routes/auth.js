@@ -16,12 +16,13 @@ const User = require('../models/User');
 //@access   Private
 router.get('/', auth, async (req, res) => {
   try {
-    const user = await User.findOne(req.user).select('-password');
+    console.log(req.user.id);
+    const user = await User.findById(req.user.id).select('-password');
 
     res.json(user);
   } catch (err) {
     console.error(err.message);
-    res.send(500).send('Server Error');
+    res.status(500).send('Server Error');
   }
 });
 
