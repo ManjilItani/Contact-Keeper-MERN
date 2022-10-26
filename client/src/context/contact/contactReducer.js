@@ -45,7 +45,7 @@ export default (state, action) => {
       return {
         ...state,
         filtered: state.contacts.filter((contact) => {
-          const regex = new RegExp(`${action.payload}`, 'gi');
+          const regex = new RegExp(`${action.payload}`, 'gi'); // g - means global i - means ignore cases
           return contact.name.match(regex) || contact.email.match(regex);
         }),
       };

@@ -6,7 +6,7 @@ const About = () => {
       <h1>About this App</h1>
       <p className='my-1'>This is a full stact app for keeping contacts</p>
       <p className='bg-dark p'>
-        <strong>Version:</strong>1.0.0
+        <strong>Version :</strong> 1.0.0
       </p>
     </div>
   );
